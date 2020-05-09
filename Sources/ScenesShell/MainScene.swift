@@ -9,7 +9,14 @@ import Scenes
  */
 class MainScene : Scene {
 
+    var backgroundLayer = BackgroundLayer()
+    var interactiveLayer = InteractiveLayer()
+    //var foregroundLayer = ForegroundLayer()
+    
     init() {
         super.init(name:"Main")
+        insert(layer: backgroundLayer, at: .back)
+        insert(layer: interactiveLayer, at: .front)
+        //insert(layer: foregroundLayer, at: .front)
     }
 }
